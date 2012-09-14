@@ -1,8 +1,8 @@
-<h1>Thanks for signing up<%= " #{current_user.email}" if !current_user.email.nil? %>!</h1>
+<h1><%= t("thanks1", :name => current_user.email) %></h1>
 
 <div class="connect">
 
-  <h3 class='thanks-message'>Launchy is still a work in progress. We'll keep in touch!</h3>
+  <h3 class='thanks-message'><%= t 'welcome2' %></h3>
   <!-- AddThis Button BEGIN -->
   <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
   <a class="addthis_button_preferred_1"></a>
