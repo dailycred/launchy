@@ -1,0 +1,122 @@
+$connect-height: 200px
+$h1-width: 80%
+$inner-connect-width: 200px
+body
+  :text-align center
+  :font-family 'helvetica bold', helvetica, arial
+  :background no-repeat center center fixed
+  //all photos are Creative Commons attribution license
+  //:background-image url('/assets/bg2.jpeg') //photo cred: <a href="http://www.flickr.com/photos/62313790@N00/">ilya_ktsn</a>
+  :background-image url('/assets/bg3.jpeg') //photo cred: <a href="http://www.flickr.com/photos/62313790@N00/">ilya_ktsn</a>
+  //:background-image url('/assets/bg.jpeg') //photo cred: <a href="http://www.flickr.com/photos/bnsd/">Bengt Nyman</a></p>
+  :-webkit-background-size cover
+  :-moz-background-size cover
+  :-o-background-size cover
+  :background-size cover
+  :position fixed
+  :padding-top 0px
+  :top 0
+  :bottom 0px
+  :width 100%
+  :margin 0px
+  .container
+    :width 80%
+    :margin 0px auto
+    :height 100%
+    h1
+      :color white
+      :text-shadow 1px 1px 1px black
+      //:text-shadow 0 0 3px white
+      :position fixed
+      :top 10%
+      :left 50%
+      :width $h1-width
+      :margin-left -$h1-width/2
+    .connect
+      :height $connect-height
+      :width 400px
+      :position relative
+      :top 50%
+      :background-color rgba(255, 255, 255, 0.95)
+      :border-radius 4px
+      :margin 0px auto
+      :margin-top -$connect-height/2
+      :padding 10px
+      :border 1px solid rgb(114, 114, 114)
+      :box-shadow 0 0 20px black
+      .social-connect
+        :width $inner-connect-width - 15px
+        :float left
+        :border-right 1px solid #ccc
+      .email-connect
+        :width $inner-connect-width
+        :float right
+        input:not([type="submit"])
+          :width $inner-connect-width - 20px
+        #signup-btn
+          :float right
+          :margin-right 4px
+        .loading
+          :float right
+          :position relative
+          :top 8px
+          :right 7px
+          :display none
+
+.auth-btn
+  :height 23px
+  :background-repeat no-repeat
+  :background-position top center
+  :margin 0px auto
+  :position relative
+  :left -2px
+  :max-width 150px
+  &:hover
+    :background-position center center
+  &:active
+    :background-position bottom center
+  &.auth-twitter
+    :background-image url('/assets/auth/signin_twitter.png')
+  &.auth-fb
+    :background-image url('/assets/auth/signin_facebook.png')
+
+.auth-email
+  :width 119px
+  :font-size 12px
+  :position relative
+  :left -2px
+  :padding 0.5px 14px
+  :border-radius 2px
+  :position relative
+  :padding-right 4px
+  :padding-left 24px
+  :font-family arial
+  i
+    :position absolute
+    :left 6px
+    :top 5px
+
+.social-connect
+  :display none
+.email-connect
+  :float none !important
+  :margin 0px auto
+
+#photo-cred
+  :position fixed
+  :bottom -10px
+  :right 3px
+  :text-align right
+  :color white
+  :opacity 0.8
+  :font-size 10px
+  a
+    :color white
+    :font-weight 700
+
+.addthis_toolbox
+  :width 206px
+  :margin 50px auto
+
+.thanks-message
+  :line-height 1.4

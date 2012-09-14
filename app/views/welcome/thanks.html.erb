@@ -1,0 +1,26 @@
+<h1>Thanks for signing up<%= " #{current_user.email}" if !current_user.email.nil? %>!</h1>
+
+<div class="connect">
+
+  <h3 class='thanks-message'>Launchy is still a work in progress. We'll keep in touch!</h3>
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+  <a class="addthis_button_preferred_1"></a>
+  <a class="addthis_button_preferred_2"></a>
+  <a class="addthis_button_preferred_3"></a>
+  <a class="addthis_button_compact"></a>
+  <a class="addthis_counter addthis_bubble_style"></a>
+  </div>
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};
+  var addthis_share = {
+    url: "<%= current_url %>",
+    templates: {
+      twitter: "Check out this new service: {{url}}. Built with launchy from @dailycred."
+      facebook: "Check out this new service: {{url}}."
+    }
+  }
+  </script>
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5043b82331420d8e"></script>
+  <!-- AddThis Button END -->
+
+</div>

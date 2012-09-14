@@ -1,0 +1,30 @@
+<h1>Launchy is building the next next big thing.</h1>
+
+<div class="connect">
+  <h4>Sign up to be the first to know when we launch!</h4>
+  <br>
+  <div class="social-connect">
+  <a href="<%= connect_path(:facebook) %>">
+    <div class="auth-btn auth-fb"></div>
+  </a>
+  <br>
+  <a href="<%= connect_path(:twitter) %>">
+    <div class="auth-btn auth-twitter"></div>
+  </a>
+  <br>
+  </div>
+  <div class="email-connect">
+    <form action="https://www.dailycred.com/oauth/api/signup.json" id="signup">
+      <input type="text" name="email" placeholder="Email Address" rel="popover" data-error="form user email" data-placement="right">
+      <input type="password" name="pass" placeholder="Password" rel="popover" data-error="pass" data-password-strength data-placement="right">
+      <input type="hidden" name="client_id" value="<%=Rails.configuration.DAILYCRED_CLIENT_ID%>">
+      <input type="hidden" name="redirect_uri" value="<%= current_url %>auth/dailycred/callback">
+      <input type="hidden" name="state" value="<%= @state %>">
+      <input type="submit" value="Sign Up!" class="btn btn-success" id="signup-btn">
+      <img src="/assets/loading.gif" title="" alt="" class="loading">
+    </form>
+  </div>
+  <!--<a href="#" class="btn btn-primary auth-email"><i class="icon icon-white icon-envelope"></i>Email and Password</a>-->
+</div>
+
+

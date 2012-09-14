@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Launchy</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+
+    <%= yield %>
+
+  </div>
+  <p id='photo-cred'>photo courtesy <a href="http://www.flickr.com/photos/62313790@N00/">ilya_ktsn</a></p>
+</body>
+</html>
