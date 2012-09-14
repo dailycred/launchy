@@ -1,5 +1,5 @@
-Rails.configuration.DAILYCRED_CLIENT_ID = ENV[:dc_id] || "YOUR-CLIENT-ID"
-Rails.configuration.DAILYCRED_SECRET_KEY = ENV[:dc_secret] || "YOUR-CLIENT-SECRET"
+Rails.configuration.DAILYCRED_CLIENT_ID = ENV['dc_id'] || "YOUR-CLIENT-ID"
+Rails.configuration.DAILYCRED_SECRET_KEY = ENV['dc_secret'] || "YOUR-CLIENT-SECRET"
 
 dc_id = Rails.configuration.DAILYCRED_CLIENT_ID
 dc_secret = Rails.configuration.DAILYCRED_SECRET_KEY
