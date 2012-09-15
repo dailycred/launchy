@@ -15,6 +15,7 @@ dc_options = { :client_options => {
 if File.exists?('/etc/ssl/certs')
   dc_options[:client_options][:ssl] = { :ca_path => '/etc/ssl/certs'}
 end
+
 if File.exists?('/opt/local/share/curl/curl-ca-bundle.crt')
   dc_options[:client_options][:ssl] = { :ca_file => '/opt/local/share/curl/curl-ca-bundle.crt' }
 end

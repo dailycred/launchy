@@ -2,8 +2,11 @@
 
 ##### Launchy is the quickest way to get a landing page up and running that is functional and fully customizeable with a robust authentication system. View a [demo site](http://launchy.herokuapp.com/).
 
+######Prerequisites
+
+To make full use of this, you must have installed [git](http://git-scm.com/downloads), [ruby on rails](http://rubyonrails.org/download), and the [heroku toolbelt](https://toolbelt.herokuapp.com/). You also need a (free) account for [dailycred](https://www.dailycred.com) to handle authentication.
 <!--To get started, first [sign up for dailycred](https://www.dailycred.com). Make sure you've also created a [facebook application](https://developers.facebook.com/apps) and a (twitter application)[https://dev.twitter.com/apps] so that you can integrate twitter and facebook connect into your application. Once you have your API keys ready, head over to your [settings page](https://www.dailycred.com/admin/setup) and add them to your account. Once that's all set up, open your terminal and run:-->
-To get started, simply [sign up for dailycred](https://www.dailycred.com), open your terminal, and run:
+To get started, simply open your terminal and run:
 
 	git clone git@github.com:hstove/launchy.git
 	
@@ -41,7 +44,7 @@ Since you own this rails project after you clone it, you can do whatever you wan
 
 ###Deployment
 
-This project is all set up to deploy to heroku's free tier. First, make sure you download the [heroku toolbelt](https://toolbelt.herokuapp.com/). Once you've installed that, open your terminal and run:
+This project is all set up to deploy to heroku's free tier. Open your terminal and run:
 
 	heroku create my_apps_name
 	git add . && git commit -m 'push to heroku'

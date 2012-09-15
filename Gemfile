@@ -6,7 +6,7 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'underscore-rails'
-gem 'dailycred', '>= 0.1.26'
+gem 'dailycred', :git => 'https://github.com/hstove/omniauth-dailycred.git'
 
 
 # Gems used only for assets and not required
@@ -22,8 +22,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
+group :development, :test do
   gem 'sqlite3'
+  gem 'quiet_assets'
 end
 
 group :production do
