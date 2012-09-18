@@ -4,7 +4,7 @@ Rails.configuration.DAILYCRED_SECRET_KEY = ENV['dc_secret'] || "YOUR-CLIENT-SECR
 dc_id = Rails.configuration.DAILYCRED_CLIENT_ID
 dc_secret = Rails.configuration.DAILYCRED_SECRET_KEY
 
-url = "http://ec2-23-22-55-241.compute-1.amazonaws.com:9000"
+url = "https://www.dailycred.com"
 
 dc_options = { :client_options => {
         :site => url,

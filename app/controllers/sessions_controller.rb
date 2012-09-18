@@ -12,14 +12,14 @@ class SessionsController < ApplicationController
   #GET /logout
   def destroy
     session[:user_id] = nil
-    redirect_to auth_path
+    redirect_to root_url
   end
 
   def info
   end
 
   def failure
-    redirect_to auth_info_path, notice: params[:message]
+    redirect_to root_url
   end
 
   private
