@@ -5,6 +5,7 @@ Launchy::Application.routes.draw do
   match "/logout" => "sessions#destroy", :as => :logout
   match "/auth" => "sessions#info", :as => :auth
   match "/thanks" => "welcome#thanks", :as => :thanks
+  match "/auth/failure" => "sessions#failure"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

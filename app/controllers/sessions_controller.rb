@@ -18,6 +18,10 @@ class SessionsController < ApplicationController
   def info
   end
 
+  def failure
+    redirect_to auth_info_path, notice: params[:message]
+  end
+
   private
 
   def auth_hash

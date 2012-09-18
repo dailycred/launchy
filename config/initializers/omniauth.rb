@@ -4,11 +4,11 @@ Rails.configuration.DAILYCRED_SECRET_KEY = ENV['dc_secret'] || "YOUR-CLIENT-SECR
 dc_id = Rails.configuration.DAILYCRED_CLIENT_ID
 dc_secret = Rails.configuration.DAILYCRED_SECRET_KEY
 
-url = "https://www.dailycred.com"
+url = "http://ec2-23-22-55-241.compute-1.amazonaws.com:9000"
 
 dc_options = { :client_options => {
         :site => url,
-        :authorize_url => '/oauth/authorize',
+        :authorize_url => '/connect',
         :token_url => '/oauth/access_token'
       } }
 
@@ -27,7 +27,7 @@ end
 #see https://www.dailycred.com/docs/js
 middleware_opts = {
   :url => url,
-  :sdk => false,
+  :sdk => true,
   :modal => false,
   :triggers => ['.auth-email']}
 
