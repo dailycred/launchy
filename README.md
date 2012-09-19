@@ -4,7 +4,7 @@
 
 ######Prerequisites
 
-To make full use of this, you must have installed [git](http://git-scm.com/downloads), [ruby on rails](http://rubyonrails.org/download), and the [heroku toolbelt](https://toolbelt.herokuapp.com/). You also need a (free) account for [dailycred](https://www.dailycred.com) to handle authentication.
+To make full use of this, you must have installed [git](http://git-scm.com/downloads), [ruby on rails](http://rubyonrails.org/download) (version 3.2, with ruby version 1.9), and the [heroku toolbelt](https://toolbelt.herokuapp.com/) (for deployment). You also need a (free) account for [dailycred](https://www.dailycred.com) to handle authentication.
 <!--To get started, first [sign up for dailycred](https://www.dailycred.com). Make sure you've also created a [facebook application](https://developers.facebook.com/apps) and a (twitter application)[https://dev.twitter.com/apps] so that you can integrate twitter and facebook connect into your application. Once you have your API keys ready, head over to your [settings page](https://www.dailycred.com/admin/setup) and add them to your account. Once that's all set up, open your terminal and run:-->
 To get started, simply open your terminal and run:
 
@@ -12,8 +12,8 @@ To get started, simply open your terminal and run:
 	
 Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings). The first two lines should look something like this:
 
-	Rails.configuration.DAILYCRED_CLIENT_ID = "YOUR-REAL-CLIENT-ID"
-	Rails.configuration.DAILYCRED_SECRET_KEY = "YOUR-REAL-CLIENT-SECRET"
+	Rails.configuration.DAILYCRED_CLIENT_ID = ENV['dc_id'] || "YOUR-CLIENT-ID"
+	Rails.configuration.DAILYCRED_SECRET_KEY = ENV['dc_secret'] || "YOUR-CLIENT-SECRET"
 	
 Finally, run `rails s` and open your browser to <http://localhost:3000>.
 
