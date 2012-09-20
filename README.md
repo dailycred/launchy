@@ -10,7 +10,7 @@ To get started, simply open your terminal and run:
 
 	git clone git@github.com:hstove/launchy.git
 	
-Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings). The first two lines should look something like this:
+Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings/keys). The first two lines should look something like this:
 
 	Rails.configuration.DAILYCRED_CLIENT_ID = ENV['dc_id'] || "YOUR-CLIENT-ID"
 	Rails.configuration.DAILYCRED_SECRET_KEY = ENV['dc_secret'] || "YOUR-CLIENT-SECRET"
