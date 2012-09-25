@@ -146,7 +146,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   dailycred (>= 0.1.34)
   jquery-rails
-  less
+  less-rails
   pg
   quiet_assets
   rails (= 3.2.8)
