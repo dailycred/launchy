@@ -38,7 +38,7 @@ GEM
       execjs
     coffee-script-source (1.3.3)
     commonjs (0.2.6)
-    dailycred (0.1.32)
+    dailycred (0.1.34)
       omniauth
       omniauth-oauth2
     erubis (2.7.0)
@@ -144,7 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  dailycred (>= 0.1.32)
+  dailycred (>= 0.1.34)
   jquery-rails
   less
   pg
