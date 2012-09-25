@@ -10,7 +10,7 @@ To get started, simply open your terminal and run:
 
 	git clone git@github.com:hstove/launchy.git
 	
-Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings). The first two lines should look something like this:
+Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings). Replace the default `YOUR_CLIENT_ID` and `YOUR-CLIENT-SECRET` with your api keys. The first two lines should look something like this before you change them:
 
 	Rails.configuration.DAILYCRED_CLIENT_ID = ENV['dc_id'] || "YOUR-CLIENT-ID"
 	Rails.configuration.DAILYCRED_SECRET_KEY = ENV['dc_secret'] || "YOUR-CLIENT-SECRET"
@@ -46,7 +46,7 @@ Since you own this rails project after you clone it, you can do whatever you wan
 
 This project is all set up to deploy to heroku's free tier. Open your terminal and run:
 
-	heroku create my_apps_name
+	heroku create my-apps-name
 	git add . && git commit -m 'push to heroku'
 	git push heroku master
 	heroku run rake db:migrate

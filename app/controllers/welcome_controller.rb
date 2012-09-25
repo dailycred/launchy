@@ -1,10 +1,11 @@
 class WelcomeController < ApplicationController
-  require 'securerandom'
   before_filter :authenticate, :only => [:thanks]
 
   def home
-    @state = SecureRandom.uuid
-    session["omniauth.state"] = @state
+    if !current_user.nil?
+      redirect_to :controller => 'welcome', :action => 'thanks'
+    end
+    set_state
   end
 
   def thanks

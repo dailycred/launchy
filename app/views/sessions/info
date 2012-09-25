@@ -1,7 +1,0 @@
-<% if current_user %>
-  <p>Hello <%= current_user.email %> <br>
-    <%= link_to 'Logout', logout_path %>
-  </p>
-<% else %>
-  <%= link_to 'Login In', login_path %> or <%= link_to 'Sign Up', signup_path %>
-<% end %>

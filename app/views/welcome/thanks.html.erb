@@ -2,7 +2,7 @@
 
 <div class="connect">
 
-  <h3 class='thanks-message'><%= t 'welcome2' %></h3>
+  <h3 class='thanks-message'><%= t 'thanks2' %></h3>
   <!-- AddThis Button BEGIN -->
   <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
   <a class="addthis_button_preferred_1"></a>
@@ -15,12 +15,13 @@
   var addthis_share = {
     url: "<%= current_url %>",
     templates: {
-      twitter: "Check out this new service: {{url}}. Built with launchy from @dailycred."
+      twitter: "Check out this new service: {{url}}. Built with launchy from @dailycred.",
       facebook: "Check out this new service: {{url}}."
     }
   }
   </script>
   <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5043b82331420d8e"></script>
   <!-- AddThis Button END -->
+  <%= link_to 'logout', dailycred_engine.logout_path %>
 
 </div>

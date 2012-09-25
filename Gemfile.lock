@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/hstove/omniauth-dailycred.git
-  revision: 37a2bdab76e95902b19606e31ed7ee0374c201ce
-  specs:
-    dailycred (0.1.27)
-      omniauth
-      omniauth-oauth2
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,6 +38,9 @@ GEM
       execjs
     coffee-script-source (1.3.3)
     commonjs (0.2.6)
+    dailycred (0.1.32)
+      omniauth
+      omniauth-oauth2
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -84,7 +79,7 @@ GEM
     omniauth (1.1.1)
       hashie (~> 1.2)
       rack
-    omniauth-oauth2 (1.1.0)
+    omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     pg (0.14.0)
@@ -149,7 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  dailycred!
+  dailycred (>= 0.1.32)
   jquery-rails
   less
   pg
