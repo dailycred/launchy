@@ -6,8 +6,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'underscore-rails'
-# gem 'dailycred', :git => 'https://github.com/hstove/omniauth-dailycred.git'
-gem 'dailycred', '0.1.4'
+gem 'dailycred', :git => 'https://github.com/hstove/omniauth-dailycred.git'
+# gem 'dailycred', '0.1.4'
 # gem 'dailycred', :path => '../gems/dailycred'
 
 
