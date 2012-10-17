@@ -4,9 +4,6 @@ Rails.configuration.DAILYCRED_SECRET_KEY = ENV['launchy_dc_secret'] || "YOUR-CLI
 
 #this is used to redirect to '/thanks' after login and '/' after logout
 dc_options = {
-  :client_options => {
-    :site => 'http://ec2-72-44-40-55.compute-1.amazonaws.com:9000'
-  },
   :verbose => true,
   :after_auth => '/thanks',
   :after_unauth => '/'
