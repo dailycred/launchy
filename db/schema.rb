@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120912141409) do
+ActiveRecord::Schema.define(:version => 20121010200027) do
 
   create_table "users", :force => true do |t|
-    t.string   "provider",                 :null => false
-    t.string   "uid",                      :null => false
+    t.string   "provider"
+    t.string   "uid"
     t.string   "email"
-    t.integer  "created",     :limit => 8
+    t.integer  "created"
     t.string   "username"
     t.boolean  "verified"
     t.boolean  "admin"
@@ -26,8 +26,14 @@ ActiveRecord::Schema.define(:version => 20120912141409) do
     t.text     "facebook"
     t.text     "tags"
     t.text     "referred"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.text     "google"
+    t.text     "twitter"
+    t.text     "github"
+    t.text     "access_tokens"
+    t.boolean  "subscribed"
+    t.string   "display"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

@@ -1,4 +1,4 @@
-<h1><%= t("thanks1", :name => current_user.email) %></h1>
+<h1><%= t("thanks1", :name => current_user.display_name) %></h1>
 
 <div class="connect">
 
@@ -11,9 +11,9 @@
   <a class="addthis_button_compact"></a>
   <a class="addthis_counter addthis_bubble_style"></a>
   </div>
-  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};
   var addthis_share = {
-    url: "<%= current_url %>",
+    url: "<%= current_user.referral_link(current_url) %>",
     templates: {
       twitter: "Check out this new service: {{url}}. Built with launchy from @dailycred.",
       facebook: "Check out this new service: {{url}}."

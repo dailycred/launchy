@@ -1,0 +1,151 @@
+.big-btn
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
+  border-radius: 4px
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 2px white
+  color: white
+  display: inline-block
+  font-size: 16px
+  font-weight: bold
+  line-height: 1
+  min-width: 100px
+  padding: 5px 2px 5px 50px
+  position: relative
+  text-align: left
+  margin: 5px
+  &:hover
+    color: white
+    text-decoration: none
+
+big-btn:active
+  -moz-box-shadow: inset 0 1px 2px rgba(34, 25, 25, 0.3), 0 2px white
+  -webkit-box-shadow: inset 0 1px 2px rgba(34, 25, 25, 0.3), 0 2px white
+  box-shadow: inset 0 1px 2px rgba(34, 25, 25, 0.3), 0 2px white
+  color: rgba(255, 255, 255, 0.7)
+
+.big-btn .logo
+  background-position: center center
+  background-repeat: no-repeat
+  bottom: 0
+  left: 0
+  position: absolute
+  top: 0
+  width: 40px
+  background-size: 20px 20px
+
+big-btn:active .logo
+  opacity: .7
+
+/* the following styles are overwritten by specific provider styles
+
+.big-btn
+  background: #555
+  background: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#444444))
+  border: 1px solid #222
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555', endColorstr='#444')
+  text-shadow: 0 -1px #222222
+  .logo
+    background-color: #888
+    background-color: rgba(255, 255, 255, 0.2)
+    background-image: url('/assets/auth/icon-email.png')
+    padding: 0
+  &:hover
+    background: #666
+    background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#555555))
+    background: -moz-linear-gradient(top, #666666, #555555)
+    background: -o-linear-gradient(top, #666666, #555555)
+    background: -webkit-linear-gradient(top, #666666, #555555)
+    background: linear-gradient(top, #666666, #555555)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666', endColorstr='#555')
+  &:active
+    background: #4D90FE
+    background: -webkit-gradient(linear, left top, left bottom, from(#777777), to(#666666))
+    background: -moz-linear-gradient(top, #777777, #666666)
+    background: -o-linear-gradient(top, #777777, #666666)
+    background: -webkit-linear-gradient(top, #777777, #666666)
+    background: linear-gradient(top, #777777, #666666)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#777', endColorstr='#666')
+
+.facebook
+  background: #415EA3
+  background: -webkit-gradient(linear, left top, left bottom, from(#415ea3), to(#2e4a88))
+  border: 1px solid #09164A
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#415ea3', endColorstr='#2f4a89')
+  text-shadow: 0 -1px #28417a
+  &:hover
+    background: #3b5695
+    background: -webkit-gradient(linear, left top, left bottom, from(#3b5695), to(#2a447e))
+    background: -moz-linear-gradient(top, #3b5695, #2a447e)
+    background: -o-linear-gradient(top, #3b5695, #2a447e)
+    background: -webkit-linear-gradient(top, #3b5695, #2a447e)
+    background: linear-gradient(top, #3b5695, #2a447e)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b5695', endColorstr='#2a447e')
+  &:active
+    background: #2e4a88
+    background: -webkit-gradient(linear, left top, left bottom, from(#2e4a88), to(#27407a))
+    background: -moz-linear-gradient(top, #2e4a88, #27407a)
+    background: -o-linear-gradient(top, #2e4a88, #27407a)
+    background: -webkit-linear-gradient(top, #2e4a88, #27407a)
+    background: linear-gradient(top, #2e4a88, #27407a)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e4a88', endColorstr='#27407a')
+  .logo
+    background-color: #5F75A9
+    background-color: rgba(255, 255, 255, 0.2)
+    background-image: url('/assets/auth/icon-facebook.png')
+    padding: 0
+
+.twitter
+  background: #41C0F3
+  background: -webkit-gradient(linear, left top, left bottom, from(#41c0f3), to(#3fbaec))
+  border: 1px solid #2982A8
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#41c0f3', endColorstr='#3fbaec')
+  text-shadow: 0 -1px #2982a8
+  .logo
+    background-color: #66CAF2
+    background-color: rgba(255, 255, 255, 0.2)
+    background-image: url('/assets/auth/icon-twitter.png')
+    padding: 0
+  &:hover
+    background: #3ebaec
+    background: -webkit-gradient(linear, left top, left bottom, from(#3ebaec), to(#3cb3e3))
+    background: -moz-linear-gradient(top, #3ebaec, #3cb3e3)
+    background: -o-linear-gradient(top, #3ebaec, #3cb3e3)
+    background: -webkit-linear-gradient(top, #3ebaec, #3cb3e3)
+    background: linear-gradient(top, #3ebaec, #3cb3e3)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3ebaec', endColorstr='#3cb3e3')
+  &:active
+    background: #41c0f3
+    background: -webkit-gradient(linear, left top, left bottom, from(#3fbaec), to(#2d94be))
+    background: -moz-linear-gradient(top, #3fbaec, #2d94be)
+    background: -o-linear-gradient(top, #3fbaec, #2d94be)
+    background: -webkit-linear-gradient(top, #3fbaec, #2d94be)
+    background: linear-gradient(top, #3fbaec, #2d94be)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fbaec', endColorstr='#2d94be')
+
+.google
+  background: #4D90FE
+  background: -webkit-gradient(linear, left top, left bottom, from(#4d90fe), to(#5e90fe))
+  border: 1px solid #222
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4D90FE', endColorstr='#5E90FE')
+  text-shadow: 0 -1px #222222
+  .logo
+    background-color: #4D90FE
+    background-color: rgba(255, 255, 255, 0.2)
+    background-image: url('/assets/auth/icon-google.png')
+    padding: 0
+  &:hover
+    background: #4D90FE
+    background: -webkit-gradient(linear, left top, left bottom, from(#5e90fe), to(#5e90fe))
+    background: -moz-linear-gradient(top, #5e90fe, #5e90fe)
+    background: -o-linear-gradient(top, #5e90fe, #5e90fe)
+    background: -webkit-linear-gradient(top, #5e90fe, #5e90fe)
+    background: linear-gradient(top, #5e90fe, #5e90fe)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5E90FE', endColorstr='#5E90FE')
+  &:active
+    background: #4D90FE
+    background: -webkit-gradient(linear, left top, left bottom, from(#3c90fe), to(#3c90fe))
+    background: -moz-linear-gradient(top, #3c90fe, #3c90fe)
+    background: -o-linear-gradient(top, #3c90fe, #3c90fe)
+    background: -webkit-linear-gradient(top, #3c90fe, #3c90fe)
+    background: linear-gradient(top, #3c90fe, #3c90fe)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3C90FE', endColorstr='#3C90FE')

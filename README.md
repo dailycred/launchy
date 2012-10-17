@@ -5,33 +5,52 @@
 ######Prerequisites
 
 To make full use of this, you must have installed [git](http://git-scm.com/downloads), [ruby on rails](http://rubyonrails.org/download) (version 3.2, with ruby version 1.9), and the [heroku toolbelt](https://toolbelt.herokuapp.com/) (for deployment). You also need a (free) account for [dailycred](https://www.dailycred.com) to handle authentication.
+
+To use social sign-in, you must first create an application for Facebook, Twitter, and Google. You can view instructions and set API keys on your [settings page](https://www.dailycred.com/admin/settings/identity-providers).
 <!--To get started, first [sign up for dailycred](https://www.dailycred.com). Make sure you've also created a [facebook application](https://developers.facebook.com/apps) and a (twitter application)[https://dev.twitter.com/apps] so that you can integrate twitter and facebook connect into your application. Once you have your API keys ready, head over to your [settings page](https://www.dailycred.com/admin/setup) and add them to your account. Once that's all set up, open your terminal and run:-->
 To get started, simply open your terminal and run:
 
-	git clone git@github.com:hstove/launchy.git
-	
+		git clone git@github.com:hstove/launchy.git
+
 
 Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings). Replace the default `YOUR_CLIENT_ID` and `YOUR-CLIENT-SECRET` with your api keys. The first two lines should look something like this before you change them:
 
-	Rails.configuration.DAILYCRED_CLIENT_ID = ENV['dc_id'] || "YOUR-CLIENT-ID"
-	Rails.configuration.DAILYCRED_SECRET_KEY = ENV['dc_secret'] || "YOUR-CLIENT-SECRET"
-	
+		Rails.configuration.DAILYCRED_CLIENT_ID = ENV['launchy_dc_id'] || "YOUR-CLIENT-ID"
+		Rails.configuration.DAILYCRED_SECRET_KEY = ENV['launchy_dc_secret'] || "YOUR-CLIENT-SECRET"
+
 Finally, run `rails s` and open your browser to <http://localhost:3000>.
 
-You're all set! You have a fully running landing page where users can create real accounts and sign up with facebook and twitter. This has an advantage over other email-only options in that you can get a better idea of who your users are. Also, if you decide to build out a real application, you can keep all the same users who have already signed up for you.
+You're all set! You have a fully running landing page where users can create real accounts and sign up with Facebook, Google, and Twitter. This has an advantage over other email-only options in that you can get a better idea of who your users are. Also, if you decide to build out a real application, you can keep all the same users who have already signed up for you.
 
 ###Customization
 
 ######Background Url
 
-There are three preset options for the background image. open `app/assets/stylesheets/welcome.css.sass`. Around line 8, you should see these lines: 
+There are three preset options for the background image. open `app/assets/stylesheets/welcome.css.sass`. Around line 8, you should see these lines:
 
 	  //all photos are Creative Commons attribution license
 	  //:background-image url('/assets/bg2.jpeg') //photo cred: <a href="http://www.flickr.com/photos/62313790@N00/">ilya_ktsn</a>
 	  :background-image url('/assets/bg3.jpeg') //photo cred: <a href="http://www.flickr.com/photos/62313790@N00/">ilya_ktsn</a>
 	  //:background-image url('/assets/bg.jpeg') //photo cred: <a href="http://www.flickr.com/photos/bnsd/">Bengt Nyman</a></p>
-	  
+
 Feel free to comment out one line and un-comment another to play with different background images. Be sure to change the photo cred when you do in `app/views/layouts/application.html.erb` because these photos are Creative Commons attribution liscensed, found on [flickr creative commons](http://www.flickr.com/creativecommons/). Feel free to find your own!
+
+To remove the social sign-in buttons, open `app/assets/stylesheets/welcome.css.sass` and uncomment lines 98-103, so that instead of:
+
+		//
+		  .social-connect
+		    :display none
+		  .email-connect
+		    :float none !important
+		    :margin 0px auto
+
+It looks like this:
+
+	  .social-connect
+	    :display none
+	  .email-connect
+	    :float none !important
+	    :margin 0px auto
 
 ######Text
 
@@ -47,14 +66,14 @@ Since you own this rails project after you clone it, you can do whatever you wan
 
 This project is all set up to deploy to heroku's free tier. Open your terminal and run:
 
-	heroku create my-apps-name
-	git add . && git commit -m 'push to heroku'
-	git push heroku master
-	heroku run rake db:migrate
-	
+		heroku create my-apps-name
+		git add . && git commit -m 'push to heroku'
+		git push heroku master
+		heroku run rake db:migrate
+
 At this point, you should be able to open and share your app on heroku with the world!
 
 ###Conclusion
 
 We'd love to hear any feedback from you about how we can make our product easier to use and more powerful. If you've run into any hiccups along the way, feel free to email <support@dailycred.com> for any help and we'd love to assist you.
-	
+
