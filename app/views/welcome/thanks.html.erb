@@ -3,25 +3,11 @@
 <div class="connect">
 
   <h3 class='thanks-message'><%= t 'thanks2' %></h3>
-  <!-- AddThis Button BEGIN -->
-  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-  <a class="addthis_button_preferred_1"></a>
-  <a class="addthis_button_preferred_2"></a>
-  <a class="addthis_button_preferred_3"></a>
-  <a class="addthis_button_compact"></a>
-  <a class="addthis_counter addthis_bubble_style"></a>
-  </div>
-  <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};
-  var addthis_share = {
-    url: "<%= current_user.referral_link(current_url) %>",
-    templates: {
-      twitter: "Check out this new service: {{url}}. Built with launchy from @dailycred.",
-      facebook: "Check out this new service: {{url}}."
-    }
-  }
-  </script>
-  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5043b82331420d8e"></script>
-  <!-- AddThis Button END -->
-  <%= link_to 'logout', dailycred_engine.logout_path %>
+  <%= link_to "<span class=\"logo\"></span>Share This".html_safe, facebook_url, :class => 'big-btn facebook' %>
+  <br>
+  <%= link_to "<span class=\"logo\"></span>Tweet This".html_safe, tweet_url, :class => 'big-btn twitter' %>
+  <br>
+  <%= link_to "<span class=\"logo\"></span>Share This".html_safe, gplus_url, :class => 'big-btn google' %>
+  <%= link_to 'log out', dailycred_engine.logout_path, class: "logout" %>
 
 </div>
