@@ -77,3 +77,5 @@ At this point, you should be able to open and share your app on heroku with the 
 
 We'd love to hear any feedback from you about how we can make our product easier to use and more powerful. If you've run into any hiccups along the way, feel free to email <support@dailycred.com> for any help and we'd love to assist you.
 
+![](https://www.dailycred.com/dc.gif?client_id=dailycred&title=launchy_repo "dailycred")
+
