@@ -1,5 +1,6 @@
-$connect-height: 200px
+$connect-height: 300px
 $h1-width: 80%
+$connect-width: 400px
 $inner-connect-width: 200px
 body
   :text-align center
@@ -34,7 +35,7 @@ body
       :margin-left -$h1-width/2
     .connect
       :height $connect-height
-      :width 400px
+      :width $connect-width
       :position relative
       :top 50%
       :background-color rgba(255, 255, 255, 0.95)
@@ -45,12 +46,13 @@ body
       :border 1px solid rgb(114, 114, 114)
       :box-shadow 0 0 20px black
       .social-connect
-        :width $inner-connect-width - 15px
+        :width $connect-width - $inner-connect-width - 15px
         :float left
         :border-right 1px solid #ccc
       .email-connect
         :width $inner-connect-width
         :float right
+        :margin-top 50px
         input:not([type="submit"])
           :width $inner-connect-width - 20px
         #signup-btn

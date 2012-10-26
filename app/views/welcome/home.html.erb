@@ -4,7 +4,7 @@
   <h4><%= t "welcome2" %></h4>
   <br>
   <div class="social-connect">
-    <% [:facebook, :twitter, :google].each do |social| %>
+    <% [:facebook, :twitter, :google, :instagram, :disqus].each do |social| %>
       <a href="<%= connect_path(social) %>" class="big-btn <%= social.to_s %>"><span class="logo"></span><%= social.capitalize %></a>
       <br>
     <% end %>
