@@ -6,11 +6,11 @@
 
 To make full use of this, you must have installed [git](http://git-scm.com/downloads), [ruby on rails](http://rubyonrails.org/download) (version 3.2, with ruby version 1.9), and the [heroku toolbelt](https://toolbelt.herokuapp.com/) (for deployment). You also need a (free) account for [dailycred](https://www.dailycred.com) to handle authentication.
 
-To use social sign-in, you must first create an application for Facebook, Twitter, and Google. You can view instructions and set API keys on your [settings page](https://www.dailycred.com/admin/settings/identity-providers).
-<!--To get started, first [sign up for dailycred](https://www.dailycred.com). Make sure you've also created a [facebook application](https://developers.facebook.com/apps) and a (twitter application)[https://dev.twitter.com/apps] so that you can integrate twitter and facebook connect into your application. Once you have your API keys ready, head over to your [settings page](https://www.dailycred.com/admin/setup) and add them to your account. Once that's all set up, open your terminal and run:-->
+To use social sign-in, you must first create an application for Facebook, Twitter, Google, and Instagram. You can view instructions and set API keys on your [settings page](https://www.dailycred.com/admin/settings/identity-providers).
 To get started, simply open your terminal and run:
 
 		git clone git@github.com:hstove/launchy.git
+		cd launchy && bundle install
 
 
 Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings). Replace the default `YOUR_CLIENT_ID` and `YOUR-CLIENT-SECRET` with your api keys. The first two lines should look something like this before you change them:
@@ -57,6 +57,10 @@ It looks like this:
 There are four main messages: two on the welcome page, and two on the 'thanks' page. All four of these messages are conveniently located in the file `config/locales/en.yml`. Simply open this file and start changing the text to be specific to your application.
 
 You may run out of space for text inside the 'container' element. If that is the case, consider changing the height of that element on line 1 of `app/assets/stylesheets/welcome.css.sass`.
+
+### Testing
+
+Launchy is set up out-of-the-box with functional and integration tests. It also is set up with [guard](https://github.com/guard/guard) and [spork](https://github.com/sporkrb/spork) for running your tests in the background. To run `guard`, simply run `guard` in your terminal. Run `rake test:functionals` if you simply want to run your functional tests once.
 
 ######Everything Else
 

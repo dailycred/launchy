@@ -68,7 +68,9 @@ formSubmit = ->
         popoverErrors(data.errors)
       else
         document.location = data.redirect
-    error: ->
+    error: (e, t, s)->
+      console.log 'error'
+      console.log e.responseText
       $('.loading').hide()
       ajaxing = false
       $("[data-error*=\"form\"]").attr('data-content', "An error occured. Please check your network connection and try again momentarily.").popover('show')

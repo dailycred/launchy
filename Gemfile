@@ -27,6 +27,21 @@ gem "twitter-bootstrap-rails"
 group :development, :test do
   gem 'sqlite3'
   gem 'quiet_assets'
+  gem 'mocha_rails'
+  gem 'factory_girl_rails'
+  gem 'spork-rails'
+  gem 'spork-testunit'
+  gem "mocha", :require => false
+  gem 'guard-spork'
+  gem 'guard-test'
+  gem 'capybara'
+  # gem 'capybara-webkit' use webkit for headless integration tests
+  gem 'database_cleaner'
+  # use these gems for notifications from guard when running tests
+  # gem 'ruby_gntp'
+  # gem 'growl'
+  gem "mini_magick"
+  gem 'rb-fsevent', :require => false
 end
 
 group :production do

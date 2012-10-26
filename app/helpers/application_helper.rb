@@ -5,7 +5,8 @@ module ApplicationHelper
   end
 
   def current_url
-    "#{request.protocol}#{request.host_with_port}#{request.fullpath}"
+    host = if request.host == "127.0.0.1" then "localhost" else request.host end
+    "#{request.protocol}#{host}:#{request.port}#{request.fullpath}"
   end
 
   def tweet_url opts={}

@@ -1,9 +1,8 @@
-<h1><%= t("thanks1", :name => current_user.display) %></h1>
+<h1 class='thanks'><%= t("thanks1", :name => current_user.display) %></h1>
 
 <div class="connect">
 
   <h3 class='thanks-message'><%= t 'thanks2' %></h3>
-  <br>
   <br>
   <%= link_to "<span class=\"logo\"></span>Share This".html_safe, facebook_url, :class => 'big-btn facebook' %>
   <br>

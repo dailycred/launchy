@@ -1,4 +1,6 @@
 Launchy::Application.routes.draw do
+  mount MochaRails::Engine => 'mocha' unless Rails.env.production?
+
   match "/thanks" => "welcome#thanks", :as => :thanks
   mount Dailycred::Engine => '/auth', :as => 'dailycred_engine'
   # The priority is based upon order of creation:
@@ -50,7 +52,7 @@ Launchy::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#home'
+  root :to => 'welcome#home', as: 'home'
 
   # See how all your routes lay out with "rake routes"
 
