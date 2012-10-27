@@ -40,8 +40,7 @@ group :development, :test do
   # use these gems for notifications from guard when running tests
   # gem 'ruby_gntp'
   # gem 'growl'
-  gem "mini_magick"
-  gem 'rb-fsevent', :require => false
+  # gem 'rb-fsevent', :require => false
 end
 
 group :production do
