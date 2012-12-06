@@ -1,13 +1,16 @@
-require 'test_helper'
+#uncomment this test to use integration testing.
+#it is recommended to use 'capybara-webkit' for headless testing
 
-class UserFlowTest < ActionDispatch::IntegrationTest
-  test "login with email" do
-    visit '/'
+# require 'test_helper'
 
-    fill_in "email", with: 'hank@2.com'
-    fill_in "pass", with: 'password'
-    click_button "signup-btn"
-    wait_until { find('.thanks') }
-    assert_equal current_path, '/thanks'
-  end
-end
+# class UserFlowTest < ActionDispatch::IntegrationTest
+#   test "login with email" do
+#     visit '/'
+
+#     fill_in "email", with: 'hank@2.com'
+#     fill_in "pass", with: 'password'
+#     click_button "signup-btn"
+#     wait_until { find('.thanks') }
+#     assert_equal current_path, '/thanks'
+#   end
+# end

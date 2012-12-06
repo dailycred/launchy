@@ -201,6 +201,7 @@ DEPENDENCIES
   dailycred (= 0.1.41)
   database_cleaner
   factory_girl_rails
+  guard (= 1.3.3)
   guard-spork
   guard-test
   jquery-rails

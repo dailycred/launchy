@@ -32,6 +32,7 @@ group :development, :test do
   gem 'spork-rails'
   gem 'spork-testunit'
   gem "mocha", :require => false
+  gem 'guard', '1.3.3'
   gem 'guard-spork'
   gem 'guard-test'
   gem 'capybara'
