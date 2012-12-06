@@ -1,5 +1,7 @@
 # Launchy by [Dailycred](https://www.dailycred.com)
 
+[![Build Status](https://secure.travis-ci.org/dailycred/launchy.png?branch=master)](https://travis-ci.org/dailycred/launchy)
+
 ##### Launchy is the quickest way to get a landing page up and running that is functional and fully customizeable with a robust authentication system. View a [demo site](http://launchy.herokuapp.com/).
 
 ######Prerequisites
