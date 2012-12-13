@@ -6,21 +6,28 @@
 
 ######Prerequisites
 
-To make full use of this, you must have installed [git](http://git-scm.com/downloads), [ruby on rails](http://rubyonrails.org/download) (version 3.2, with ruby version 1.9), and the [heroku toolbelt](https://toolbelt.herokuapp.com/) (for deployment). You also need a (free) account for [dailycred](https://www.dailycred.com) to handle authentication.
+To make full use of this, you must have installed [git](http://git-scm.com/downloads), [ruby on rails](http://rubyonrails.org/download) (version 3.2, with ruby version 1.9), and the [heroku toolbelt](https://toolbelt.herokuapp.com/) (for deployment).
 
+You also need a (free) account for [dailycred](https://www.dailycred.com) to handle authentication.  Use "localhost, heroku.com" as the Domain when setting up your app.
 To use social sign-in, you must first create an application for Facebook, Twitter, Google, and Instagram. You can view instructions and set API keys on your [settings page](https://www.dailycred.com/admin/settings/identity-providers).
+
+######Install & configure
 To get started, simply open your terminal and run:
 
 		git clone git@github.com:hstove/launchy.git
 		cd launchy && bundle install
-
 
 Open up the newly downloaded 'launchy' folder in your favorite text editor, and open up the file `config/initializers/omniauth.rb`. Change the first two lines to use your dailycred API keys, located on your [account page](https://www.dailycred.com/admin/settings). Replace the default `YOUR_CLIENT_ID` and `YOUR-CLIENT-SECRET` with your api keys. The first two lines should look something like this before you change them:
 
 		Rails.configuration.DAILYCRED_CLIENT_ID = ENV['launchy_dc_id'] || "YOUR-CLIENT-ID"
 		Rails.configuration.DAILYCRED_SECRET_KEY = ENV['launchy_dc_secret'] || "YOUR-CLIENT-SECRET"
 
-Finally, run `rails s` and open your browser to <http://localhost:3000>.
+Finally, run: 
+
+		rake db:migrate
+		rails s
+
+and open your browser to <http://localhost:3000>.  Now create a test user, and then sign in to your [dashboard](https://www.dailycred.com/admin/dashboard) to see the list of users that have signed up.
 
 You're all set! You have a fully running landing page where users can create real accounts and sign up with Facebook, Google, and Twitter. This has an advantage over other email-only options in that you can get a better idea of who your users are. Also, if you decide to build out a real application, you can keep all the same users who have already signed up for you.
 
@@ -37,7 +44,8 @@ There are three preset options for the background image. open `app/assets/styles
 
 Feel free to comment out one line and un-comment another to play with different background images. Be sure to change the photo cred when you do in `app/views/layouts/application.html.erb` because these photos are Creative Commons attribution liscensed, found on [flickr creative commons](http://www.flickr.com/creativecommons/). Feel free to find your own!
 
-To remove the social sign-in buttons, open `app/assets/stylesheets/welcome.css.sass` and uncomment lines 98-103, so that instead of:
+######Social sign-in options
+To remove any of the social sign-in buttons, open `app/assets/stylesheets/welcome.css.sass` and uncomment lines 98-103, so that instead of:
 
 		//
 		  .social-connect
@@ -77,7 +85,7 @@ This project is all set up to deploy to heroku's free tier. Open your terminal a
 		git push heroku master
 		heroku run rake db:migrate
 
-At this point, you should be able to open and share your app on heroku with the world!
+At this point, you should be able to open your launch page on heroku at [http://my-apps-name/herokuapp.com](http://my-apps-name/herokuapp.com) and share your app with the world!
 
 ###Conclusion
 
