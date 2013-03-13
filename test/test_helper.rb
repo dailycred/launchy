@@ -10,11 +10,9 @@ Spork.prefork do
   require 'test/unit'
   require "mocha"
   require 'capybara/rails'
-  Capybara.default_driver = :selenium
 
-  # Use webkit for headless integration tests
-  # make sure to uncomment 'gem "capybara-webkit"' in you Gemfile
-  # Capybara.default_driver = :webkit
+  Capybara.default_driver = :webkit
+  Capybara.default_wait_time = 20
 
   class ActiveSupport::TestCase
     include FactoryGirl::Syntax::Methods

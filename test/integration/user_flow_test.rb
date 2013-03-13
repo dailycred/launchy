@@ -1,5 +1,5 @@
-#uncomment this test to use integration testing.
-#it is recommended to use 'capybara-webkit' for headless testing
+# #uncomment this test to use integration testing.
+# #it is recommended to use 'capybara-webkit' for headless testing
 
 # require 'test_helper'
 
@@ -10,7 +10,10 @@
 #     fill_in "email", with: 'hank@2.com'
 #     fill_in "pass", with: 'password'
 #     click_button "signup-btn"
-#     wait_until { find('.thanks') }
+#     ap page.driver.console_messages
+#     ap page.driver.error_messages
+#     page.driver.save_screenshot(Rails.root.join('tmp/screen.png'), height: 1000, width: 1000)
+#     assert find('.thanks'), "user should be redirected"
 #     assert_equal current_path, '/thanks'
 #   end
 # end

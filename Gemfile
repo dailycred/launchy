@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'underscore-rails'
 # gem 'dailycred', :git => 'https://github.com/hstove/omniauth-dailycred.git'
-gem 'dailycred', '0.1.41'
-# gem 'dailycred', :path => '../gems/dailycred'
-
+# gem 'dailycred', '0.1.41'
+gem 'dailycred', :path => '../dailycred'
+gem 'awesome_print'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,7 +18,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -31,17 +31,18 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spork-rails'
   gem 'spork-testunit'
-  gem "mocha", :require => false
+  gem "mocha", '0.12.10', :require => false
   gem 'guard', '1.3.3'
   gem 'guard-spork'
   gem 'guard-test'
   gem 'capybara'
-  # gem 'capybara-webkit' use webkit for headless integration tests
+  gem 'capybara-webkit' #use webkit for headless integration tests
   gem 'database_cleaner'
   # use these gems for notifications from guard when running tests
-  # gem 'ruby_gntp'
-  # gem 'growl'
-  # gem 'rb-fsevent', :require => false
+  gem 'ruby_gntp'
+  gem 'growl'
+  gem 'rb-fsevent', :require => false
+  gem 'capybara-screenshot'
 end
 
 group :production do
