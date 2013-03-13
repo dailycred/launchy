@@ -7,7 +7,7 @@ dc_options = {
   :after_auth => '/thanks',
   :after_unauth => '/',
   middleware: {
-    :persona_audience: 'http://launchy.herokuapp.com'
+    persona_audience: 'http://launchy.herokuapp.com'
   }
 }
 
