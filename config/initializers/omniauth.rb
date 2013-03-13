@@ -5,7 +5,10 @@ Rails.configuration.DAILYCRED_SECRET_KEY = ENV['launchy_dc_secret'] || "YOUR-CLI
 dc_options = {
   :verbose => true,
   :after_auth => '/thanks',
-  :after_unauth => '/'
+  :after_unauth => '/',
+  middleware: {
+    :persona_audience: 'http://launchy.herokuapp.com'
+  }
 }
 
 Rails.configuration.DAILYCRED_OPTIONS = dc_options

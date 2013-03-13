@@ -6,9 +6,11 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'underscore-rails'
-# gem 'dailycred', :git => 'https://github.com/hstove/omniauth-dailycred.git'
+
 gem 'dailycred', '0.1.41'
 # gem 'dailycred', :path => '../gems/dailycred'
+
+gem 'awesome_print'
 
 
 # Gems used only for assets and not required
